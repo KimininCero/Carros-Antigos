@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(99, 80, 52);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+img {
+    margin-left: 49%;
+}
+
+h1 {
+    font-weight: 800;
+    color: #a5612a;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background: #deb887;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+    animation: surgir 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30% ;
+}
+
+img {
+    margin-left: 45%;
+}
+
+section.modulo p {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+section.modulo.content {
+    padding: 40px;
+    background: #c99f6a;
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1 {
+    color: #b16d19;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 3px 4px 5px #58370e;
+    z-index: 50;
+}
+
+section.modulo.parallax::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute; z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #00000067 100% );
+}
+
+section.modulo.parallax-1 {
+    background-image: url(https://uploads.vrum.com.br/2023/07/a248bb35-volkswagen-fusca-chale-suico-holzhaus-de-frente.jpg);
+}
+
+section.modulo.parallax-2 {
+    background-image: url(https://www.webmotors.com.br/wp-content/uploads/2020/11/18152208/noite-do-opala-00305082014151332.jpg);
+}
+
+section.modulo.parallax-3 {
+    background-image: url(https://uploads.vrum.com.br/2022/11/c246568a-fiat-marea-2.0-modelo-2001-prata-de-frente-no-estudio.jpg);
+}
+
+section.modulo.parallax-4 {
+    background-image: url(https://media.ford.com/content/fordmedia/fsa/br/pt/news/2018/01/04/-tbt--ford-del-rey--um-classico-que-soube-combinar-requinte-com-/jcr:content/image.img.881.495.jpg/1515158166143.jpg);
+}
+
+section.modulo.parallax-5 {
+    background-image: url(https://assets.carandclassic.com/listing-assets/alfa-romeo/155-cloverleaf-4/1994-alfa-romeo-155-cloverleaf-4-9805767005-4BELXn/bxmjH4p1D9RQjv9L9B9vOuVhNN4PtepwMCwE1ddQ.jpg?ar=16%3A9&auto=compress&fit=crop&h=450&ixlib=php-4.1.0&q=75&w=800&s=96afc0de17a163f8096d76b0718769e9);
+}
+
+.galeria {
+    margin: 1em;
+    display: flex;
+    height: 20em;
+    gap: 0.3em;
+}
+
+.galeria div {
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.6s cubic-bezier(0.50, 1, 0.320, 1);
+    border-radius: 20px;
+}
+
+.galeria div:hover {
+    flex: 2;
+}
+
+.galeria:hover div:not(:hover) {
+    filter: blur(0.1em) grayscale(20%);
+}
+
+.um {
+    animation: um-de-cada-vez 10s;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30%;
+}
+
+.dois {
+    animation: um-de-cada-vez2 5s;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30%;
+}
+
+.tres {
+    animation: um-de-cada-vez3;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30%;
+}
+
+@keyframes surgir {
+    from{
+        translate: -100vw 0;
+        opacity: 0;
+    }
+
+    to{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes um-de-cada-vez {
+    from{
+        translate: -100vw 0;
+        opacity: 0;
+    }
+
+    to{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes um-de-cada-vez2 {
+    from{
+        translate: -50vw 0;
+        opacity: 0;
+    }
+
+    to{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes um-de-cada-vez3 {
+    from{
+        translate: -25vw 0;
+        opacity: 0;
+    }
+
+    to{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 860px) {
+
+    section.modulo p {
+        margin-bottom: 30px;
+        margin-right: 20%;
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 90px;
+    }
+
+    .logo {
+        position: absolute;
+        margin-left: 12%;
+    }
+
+    a{
+        position: absolute; 
+        margin: 20%;
+        margin-top: 20%;
+    }
+
+    .container h1 {
+        margin-right: 20%;
+        margin-bottom: 20%;
+    }
+
+    section.modulo.parallax h1 {
+        color: #b16d19;
+        text-align: center;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-shadow: 3px 4px 5px #58370e;
+        z-index: 50;
+    }
+
+    section.modulo.content {
+        padding: 40px;
+        background: #c99f6a;
+        width: 85%;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url(https://uploads.vrum.com.br/2023/07/a248bb35-volkswagen-fusca-chale-suico-holzhaus-de-frente.jpg);
+    }
+    
+    section.modulo.parallax-2 {
+        background-image: url(https://www.webmotors.com.br/wp-content/uploads/2020/11/18152208/noite-do-opala-00305082014151332.jpg);
+    }
+    
+    section.modulo.parallax-3 {
+        background-image: url(https://uploads.vrum.com.br/2022/11/c246568a-fiat-marea-2.0-modelo-2001-prata-de-frente-no-estudio.jpg);
+    }
+    
+    section.modulo.parallax-4 {
+        background-image: url(https://media.ford.com/content/fordmedia/fsa/br/pt/news/2018/01/04/-tbt--ford-del-rey--um-classico-que-soube-combinar-requinte-com-/jcr:content/image.img.881.495.jpg/1515158166143.jpg);
+    }
+    
+    section.modulo.parallax-5 {
+        background-image: url(https://assets.carandclassic.com/listing-assets/alfa-romeo/155-cloverleaf-4/1994-alfa-romeo-155-cloverleaf-4-9805767005-4BELXn/bxmjH4p1D9RQjv9L9B9vOuVhNN4PtepwMCwE1ddQ.jpg?ar=16%3A9&auto=compress&fit=crop&h=450&ixlib=php-4.1.0&q=75&w=800&s=96afc0de17a163f8096d76b0718769e9);
+    }
+
+}
